@@ -32,6 +32,8 @@
 
 ## 部署与使用教程
 
+> 在现在的Deno的个人面板中，已经移除了“New Project”按钮，由“New App”替代。其URL也发生了变化 [参考这里](#验证部署)
+
 按照以下步骤，轻松部署你自己的 AstrBot GitHub 加速服务：
 
 1.  **(可选但推荐)** 给本项目点个 [**Star ⭐**](https://github.com/lxfight/astrbot2github)，你的支持是作者更新和维护的动力！
@@ -63,6 +65,12 @@
 `https://<你的项目名>.deno.dev`
 
 如果页面显示 `此地址只用于为astrbot提供更快速的github访问服务` 的信息，则表示你的代理服务已成功部署并正在运行。
+
+在新版本的astrbot中，需要在 **插件市场** 配置插件源，源地址格式：
+
+`https://<App名称>.<组织别名>.deno.net/https://raw.githubusercontent.com/AstrBotDevs/AstrBot_Plugins_Collection/refs/heads/main/plugins.json`
+
+> `https://raw.githubusercontent.com/AstrBotDevs/AstrBot_Plugins_Collection/refs/heads/main/plugins.json`是官方仓库提供的插件列表。
 
 ## 注意事项
 

@@ -1,5 +1,3 @@
-import { serve } from "https://deno.land/std@0.155.0/http/server.ts"; // 或更新到最新稳定版，如 @0.224.0
-
 async function handler(req: Request): Promise<Response> {
   const incomingUrl = new URL(req.url);
   if (incomingUrl.pathname === "/") {
@@ -72,6 +70,7 @@ async function handler(req: Request): Promise<Response> {
   }
 }
 
-console.log("此地址只用于帮助astrbot更快的连接github"); // Deno Deploy 会自动使用 $PORT
-// 监听端口 8000 (本地) 或 Deno Deploy 指定的端口
-serve(handler);
+// 使用 Deno 推荐的 Deno.serve 启动服务
+// 这种方式能让 Deno Deploy 自动管理端口和健康检查，避免部署失败
+Deno.serve(handler);
+
